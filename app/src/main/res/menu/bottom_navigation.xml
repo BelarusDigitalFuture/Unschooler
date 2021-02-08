@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/scheduleFragment"
+        android:icon="@drawable/ic_default"
+        android:title="@string/ui_menu_schedule" />
+
+    <item
+        android:id="@+id/teachersFragment"
+        android:icon="@drawable/ic_default"
+        android:title="@string/ui_menu_teachers" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_default"
+        android:title="@string/ui_menu_profile" />
+
+    <item
+        android:id="@+id/coinsFragment"
+        android:icon="@drawable/ic_default"
+        android:title="@string/ui_menu_coins" />
+
+</menu>

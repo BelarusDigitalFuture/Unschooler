@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@+id/scheduleFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="unschooler.code.ui.main.profile.ProfileFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinsFragment"
+        android:name="unschooler.code.ui.main.coins.CoinsFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="unschooler.code.ui.main.schedule.ScheduleFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/teachersFragment"
+        android:name="unschooler.code.ui.main.teachers.TeachersFragment">
+
+    </fragment>
+
+</navigation>
