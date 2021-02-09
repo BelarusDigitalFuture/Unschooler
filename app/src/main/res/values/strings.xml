@@ -1,17 +1,21 @@
 <resources>
     <string name="app_name">Unschooler</string>
     <string name="ui_ok">Ок</string>
-    <string name="ui_auth_button">Авторизоваться</string>
+    <string name="ui_auth_button">Войти через Google</string>
     <string name="ui_menu_schedule">Темы</string>
     <string name="ui_menu_coins">Монеты</string>
     <string name="ui_menu_profile">Профиль</string>
     <string name="ui_menu_teachers">Учителя</string>
     <string name="ui_my_profile">Мой профиль</string>
     <string name="ui_exit">Выход</string>
-    <string name="ui_week_rate">Рейтинг за неделю</string>
-    <string name="ui_all_rate">Рейтинг за все время</string>
+    <string name="ui_rate">Рейтинг</string>
     <string name="ui_all_coins">Заработано монет</string>
     <string name="ui_get_coins">Вывести средства</string>
     <string name="ui_in_develop">Данный функционал находится в разработке</string>
     <string name="ui_see_all">Смотреть все</string>
+    <string name="ic_theme_completed">Пройдено</string>
+    <string name="ic_theme_learn">Выучить</string>
+    <string name="ui_my_answers">Мои материалы</string>
+    <string name="ui_my_liked_answers">Избранное</string>
+    <string name="ui_recommendations">Рекомендуем</string>
 </resources>

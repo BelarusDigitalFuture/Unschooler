@@ -4,16 +4,18 @@ import dagger.Subcomponent
 import dagger.android.AndroidInjector
 import unschooler.code.ui.main.coins.CoinsModule
 import unschooler.code.ui.main.profile.ProfileModule
-import unschooler.code.ui.main.schedule.ScheduleModule
+import unschooler.code.ui.main.themes.ThemesModule
 import unschooler.code.ui.main.teachers.TeachersModule
+import unschooler.code.ui.main.themes.theme.ThemeModule
 import javax.inject.Scope
 
 @Subcomponent(
     modules = [
         ProfileModule::class,
-        ScheduleModule::class,
+        ThemesModule::class,
         CoinsModule::class,
-        TeachersModule::class
+        TeachersModule::class,
+        ThemeModule::class
     ]
 )
 @MainScope

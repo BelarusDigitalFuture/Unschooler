@@ -10,5 +10,8 @@
     <color name="button">#1E1E1E</color>
 
     <color name="line">#1F000000</color>
+    <color name="cardBackground">#f5f5f5</color>
+
+    <color name="googleButton">#4688F1</color>
 
 </resources>

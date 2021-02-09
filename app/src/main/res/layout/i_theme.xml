@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/cardBackground"
+        android:elevation="@dimen/cardElevation"
+        android:padding="@dimen/space.left"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="220dp"
+        android:layout_height="130dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="@dimen/space.left"
+            android:textColor="@color/button"
+            app:layout_constraintBottom_toTopOf="@+id/buttonIcon"/>
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/buttonIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_default"/>
+
+        <TextView
+            android:id="@+id/buttonText"
+            app:layout_constraintTop_toTopOf="@+id/buttonIcon"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonIcon"
+            app:layout_constraintStart_toEndOf="@+id/buttonIcon"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:textSize="12sp"
+            android:text="Temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
