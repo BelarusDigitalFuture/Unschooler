@@ -18,4 +18,12 @@
     <string name="ui_my_answers">Мои материалы</string>
     <string name="ui_my_liked_answers">Избранное</string>
     <string name="ui_recommendations">Рекомендуем</string>
+    <string name="ui_do_you_like_teacher">Понравился учитель?</string>
+    <string name="ui_book">Забронировать урок</string>
+    <string name="ui_more_answers">Больше объяснений</string>
+    <string name="ui_answers">Материалы</string>
+    <string name="ui_teacher_profile">Профиль учителя</string>
+    <string name="ui_progress">Прогресс</string>
+    <string name="ui_my_subjects">Мои предметы</string>
+    <string name="ui_my_progress">Мой прогресс</string>
 </resources>

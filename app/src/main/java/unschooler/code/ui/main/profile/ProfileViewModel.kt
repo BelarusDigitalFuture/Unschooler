@@ -31,4 +31,8 @@ class ProfileViewModel @Inject constructor(
             emptyList()
         }
     }
+
+    fun isMe(uid: String): Boolean {
+        return database.isMe(uid)
+    }
 }

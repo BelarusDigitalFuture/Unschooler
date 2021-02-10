@@ -1,4 +1,4 @@
-package unschooler.code.ui.main.profile
+package unschooler.code.ui.main.profile.progress
 
 import a1.inventarization.dagger.ViewModelBuilder
 import a1.inventarization.dagger.ViewModelKey
@@ -8,20 +8,18 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import dagger.multibindings.IntoMap
 import kotlinx.coroutines.InternalCoroutinesApi
-import unschooler.code.ui.main.profile.another.AnotherProfileFragment
-import unschooler.code.ui.main.profile.another.AnotherProfileViewModel
 
 @Module
-abstract class ProfileModule {
+abstract class ProgressModule {
 
     @InternalCoroutinesApi
     @ContributesAndroidInjector(modules = [
         ViewModelBuilder::class
     ])
-    internal abstract fun profileFragment(): ProfileFragment
+    internal abstract fun progressFragment(): ProgressFragment
 
     @Binds
     @IntoMap
-    @ViewModelKey(ProfileViewModel::class)
-    abstract fun bindViewModel(viewmodel: ProfileViewModel): ViewModel
+    @ViewModelKey(ProgressViewModel::class)
+    abstract fun bindViewModel(viewmodel: ProgressViewModel): ViewModel
 }

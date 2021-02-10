@@ -64,7 +64,7 @@ class Database @Inject constructor(
                     this.id = it.key
                 }
             }
-            _answers.postValue( answers.map {
+            _answers.postValue(answers.map {
                 Answer(
                     id = it.id,
                     title = it.title,
@@ -117,8 +117,21 @@ class Database @Inject constructor(
             )
         }
     }
-}
 
+    fun getUserInfo(id: String, listener: (User) -> Unit) {
+        database.child("users").child(id).get().addOnCompleteListener { task ->
+            val user = gson.fromJson(
+                JSONObject(task.result?.value as HashMap<*, *>).toString(),
+                User::class.java
+            )
+            listener.invoke(user)
+        }
+    }
+
+    fun isMe(uid: String): Boolean {
+        return user.value?.uid == uid
+    }
+}
 
 
 //createDate:

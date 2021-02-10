@@ -19,8 +19,9 @@ import kotlinx.android.synthetic.main.i_answer.view.youtube
 import kotlinx.android.synthetic.main.i_answer_photo.view.*
 import unschooler.code.R
 import unschooler.code.managers.database.models.Answer
+import unschooler.code.ui.main.themes.common.Theme
 
-class AnswerAdapter(val list: List<Answer>, val hasPhoto: Boolean, val listener: (Answer) -> Unit) :
+class AnswerAdapter(val list: List<Answer>, val hasPhoto: Boolean, val listener: (Answer) -> Unit, val userListener: (String) -> Unit) :
     RecyclerView.Adapter<AnswerAdapter.AnswerHolder>() {
 
 
@@ -55,6 +56,12 @@ class AnswerAdapter(val list: List<Answer>, val hasPhoto: Boolean, val listener:
         }
 
         if (hasPhoto){
+            holder.itemView.userName.setOnClickListener {
+                userListener.invoke(list[position].creator.uid)
+            }
+            holder.itemView.userPhoto.setOnClickListener {
+                userListener.invoke(list[position].creator.uid)
+            }
             holder.itemView.userName.text = list[position].creator.name
             if (!list[position].creator.picture.isNullOrBlank()) {
                 Picasso.get().load(list[position].creator.picture).error(R.drawable.ic_no_photo).into(holder.itemView.userPhoto)

@@ -79,7 +79,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/description"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/progressButton"
                 app:layout_constraintStart_toEndOf="@+id/photo"
                 app:layout_constraintTop_toTopOf="@+id/photo"
                 app:layout_constraintVertical_chainStyle="packed" />
@@ -95,6 +95,29 @@
                 app:layout_constraintEnd_toEndOf="@+id/name"
                 app:layout_constraintStart_toStartOf="@+id/name"
                 app:layout_constraintTop_toBottomOf="@+id/name" />
+
+            <ImageView
+                android:id="@+id/progressButton"
+                android:layout_width="48dp"
+                android:src="@drawable/ic_progress"
+                app:layout_constraintBottom_toTopOf="@+id/progressTitle"
+                app:layout_constraintTop_toTopOf="@+id/photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:layout_marginEnd="@dimen/space.left"
+                android:layout_height="48dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:id="@+id/progressTitle"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorAccent"
+                android:text="@string/ui_progress"
+                app:layout_constraintStart_toStartOf="@+id/progressButton"
+                app:layout_constraintEnd_toEndOf="@+id/progressButton"
+                app:layout_constraintBottom_toBottomOf="@+id/photo"
+                app:layout_constraintTop_toBottomOf="@+id/progressButton"/>
 
             <FrameLayout
                 android:id="@+id/line"
@@ -222,10 +245,10 @@
                 android:textSize="18sp"
                 android:text="@string/ui_my_answers"
                 android:textColor="@android:color/black"
-                android:layout_marginStart="@dimen/space.left"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="@dimen/space.top"
                 app:layout_constraintTop_toBottomOf="@+id/line3"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/answersIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -250,15 +273,25 @@
                 android:clipToPadding="false"
                 android:layout_height="wrap_content"/>
 
+            <ImageView
+                android:id="@+id/answersIcon"
+                android:layout_width="24dp"
+                android:src="@drawable/ic_bookmark_answers"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/space.left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/answersTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/answersTitle"/>
+
             <TextView
                 android:id="@+id/likedAnswersTitle"
                 android:textSize="18sp"
                 android:text="@string/ui_my_liked_answers"
                 android:textColor="@android:color/black"
-                android:layout_marginStart="@dimen/space.left"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="@dimen/space.top"
                 app:layout_constraintTop_toBottomOf="@+id/answersList"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/likedAnswersIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -283,15 +316,25 @@
                 android:clipToPadding="false"
                 android:layout_height="wrap_content"/>
 
+            <ImageView
+                android:id="@+id/likedAnswersIcon"
+                android:layout_width="24dp"
+                android:src="@drawable/ic_bookmark_liked"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/space.left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/likedAnswersTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/likedAnswersTitle"/>
+
             <TextView
                 android:id="@+id/recommendationsTitle"
                 android:textSize="18sp"
                 android:text="@string/ui_recommendations"
                 android:textColor="@android:color/black"
-                android:layout_marginStart="@dimen/space.left"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="@dimen/space.top"
                 app:layout_constraintTop_toBottomOf="@+id/likedAnswersList"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/recommendationsAnswersIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -315,6 +358,16 @@
                 android:paddingEnd="4dp"
                 android:clipToPadding="false"
                 android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/recommendationsAnswersIcon"
+                android:layout_width="24dp"
+                android:src="@drawable/ic_bookmark_recommendations"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/space.left"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recommendationsTitle"
+                app:layout_constraintBottom_toBottomOf="@+id/recommendationsTitle"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

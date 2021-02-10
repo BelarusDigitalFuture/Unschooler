@@ -5,7 +5,7 @@ class AnswerObject(
     val creator: User,
     val theme : AnswerThemeObject,
     val title: String,
-    val description: String,
+    val description: String?,
     val video: String?
 )
 

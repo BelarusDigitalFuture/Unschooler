@@ -88,19 +88,31 @@ class ProfileFragment : DaggerFragment(R.layout.f_profile) {
         }
 
         viewModel.myAnswers.observe(viewLifecycleOwner, Observer {
-            answersList.adapter = AnswerAdapter(it, false, ::openAnswer)
+            answersList.adapter = AnswerAdapter(it, false, ::openAnswer, ::openProfile)
         })
 
         viewModel.likedAnswers.observe(viewLifecycleOwner, Observer {
-            likedAnswersList.adapter = AnswerAdapter(it, true, ::openAnswer)
+            likedAnswersList.adapter = AnswerAdapter(it, true, ::openAnswer, ::openProfile)
         })
 
         viewModel.answers.observe(viewLifecycleOwner, Observer {
-            recommendationsList.adapter = AnswerAdapter(it, true, ::openAnswer)
+            recommendationsList.adapter = AnswerAdapter(it, true, ::openAnswer, ::openProfile)
         })
+
+        progressButton.setOnClickListener {
+            findNavController().navigateSafe(ProfileFragmentDirections.actionProfileFragmentToProgressFragment())
+        }
     }
 
     private fun openAnswer(answer: Answer) {
         findNavController().navigateSafe(NavMainGraphDirections.openTheme(answer.themeId, answer.id))
+    }
+
+    private fun openProfile(uid: String) {
+        if (viewModel.isMe(uid)){
+            findNavController().navigateSafe(NavMainGraphDirections.openProfile())
+        } else {
+            findNavController().navigateSafe(NavMainGraphDirections.openAnotherProfile(uid))
+        }
     }
 }

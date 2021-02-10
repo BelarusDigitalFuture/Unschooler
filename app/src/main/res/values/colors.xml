@@ -9,6 +9,9 @@
     <color name="buttonDisabled">#B5B2B2</color>
     <color name="button">#1E1E1E</color>
 
+    <color name="cell1">#0D000000</color>
+    <color name="cell2">#05000000</color>
+
     <color name="line">#1F000000</color>
     <color name="cardBackground">#f5f5f5</color>
 

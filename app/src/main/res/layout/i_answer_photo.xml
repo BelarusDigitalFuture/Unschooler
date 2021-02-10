@@ -22,9 +22,10 @@
         app:layout_constraintBottom_toBottomOf="@+id/userPhoto"
         android:id="@+id/userName"
         android:textColor="@color/button"
-        android:layout_marginStart="16dp"
+        android:paddingStart="16dp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_height="0dp"
         android:textSize="14sp"/>
 
     <LinearLayout

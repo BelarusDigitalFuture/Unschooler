@@ -15,7 +15,21 @@ class ThemeViewModel @Inject constructor(
         return database.subjects.value?.find { it.themes.find { it.id == theme } != null }
     }
 
-    fun getAnswer(answer: String) : Answer? {
-        return database.answers.value?.find { it.id == answer }
+    private fun getAnswers(theme: String): List<Answer> {
+        return database.answers.value?.filter { it.themeId == theme } ?: emptyList()
+    }
+
+    fun getAnswer(theme: String, answer: String?) : Answer? {
+        return getAnswers(theme).find { it.id == answer } ?: getAnswers(theme).firstOrNull()
+    }
+
+    fun getAnswersList(theme: String, answer: String?): List<Answer> {
+        return getAnswers(theme).toMutableList().apply {
+            this.remove(getAnswer(theme, answer))
+        }
+    }
+
+    fun isMe(uid: String): Boolean {
+        return database.isMe(uid)
     }
 }

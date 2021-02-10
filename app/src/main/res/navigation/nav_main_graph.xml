@@ -7,12 +7,37 @@
 
     <action
         android:id="@+id/openTheme"
-        app:destination="@+id/themeFragment"/>
+        app:destination="@+id/themeFragment" />
+
+    <action
+        android:id="@+id/openAnotherProfile"
+        app:destination="@+id/anotherProfileFragment" />
+    <action
+        android:id="@+id/openProfile"
+        app:destination="@+id/profileFragment" />
 
     <fragment
         android:id="@+id/profileFragment"
         android:name="unschooler.code.ui.main.profile.ProfileFragment">
 
+        <action
+            android:id="@+id/action_profileFragment_to_progressFragment"
+            app:destination="@id/progressFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="unschooler.code.ui.main.profile.progress.ProgressFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/anotherProfileFragment"
+        android:name="unschooler.code.ui.main.profile.another.AnotherProfileFragment">
+
+        <argument
+            android:name="id"
+            app:argType="string" />
     </fragment>
 
     <fragment
