@@ -26,7 +26,7 @@ class SubjectsAdapter(val list: List<Subject>, val subjectListener: (Subject) ->
         val linearLayoutManager = LinearLayoutManager(holder.itemView.context, LinearLayoutManager.HORIZONTAL, false)
         holder.itemView.list.layoutManager = linearLayoutManager
         holder.itemView.title.text = list[position].title
-        holder.itemView.list.adapter = ThemeAdapter(list[position].themes, themeListener, themeButtonListener)
+        holder.itemView.list.adapter = ThemeAdapter(list[position].themes, themeListener, themeButtonListener, list[position].title.equals("Алгебра", true))
     }
 
     override fun getItemCount(): Int = list.size
